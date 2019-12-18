@@ -1,0 +1,16 @@
+{
+	"name": "eal",
+	"version": "v0.0.0",
+	"description": "Environment abstraction library for modern JavaScript environments.",
+	"license": "ISC",
+	"type": "module",
+	"engines": {
+		"node":    ">=13.2.0",
+		"deno":    ">=0.26.0",
+		"quickjs": ">=2019-10-27",
+		"v8":      ">=7.9.317.31"
+	},
+	"devDependencies": {
+		"jg": "*"
+	}
+}
