@@ -37,19 +37,7 @@
 		},
 		"rules": {
 			"require-atomic-updates": 0,
-			"multiline-ternary": 0,
-			"indent": [
-				"error",
-				"tab",
-				{
-					"ignoreComments": true,
-					"VariableDeclarator": 0,
-					"SwitchCase": 1,
-					"ignoredNodes": [
-						"VariableDeclaration[kind=const] ConditionalExpression"
-					]
-				}
-			]
+			"multiline-ternary": 0
 		}
 	}]
 }
