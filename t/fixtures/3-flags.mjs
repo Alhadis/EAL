@@ -10,7 +10,7 @@ import {
 	isQuickJSExt,
 	isV8Shell,
 	log,
-} from "../index.mjs";
+} from "../../index.mjs";
 
 log(`haveHighResTiming: ${haveHighResTiming}`);
 log(`haveNativeDOM: ${haveNativeDOM}`);
