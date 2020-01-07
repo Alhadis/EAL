@@ -6,6 +6,7 @@
 		"mocha":   false,
 		"node":    false
 	},
+	"ignorePatterns": ["test.mjs"],
 	"overrides": [{
 		"files": ["lib/engine.mjs"],
 		"globals": {
