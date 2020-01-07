@@ -10,12 +10,8 @@ for cmd in node 'deno -A' 'qjs --std' d8 electron; do
 	for args in 'Foo Bar' 'Foo Bar Baz' '"Foo Bar" Baz'; do
 		i=`expr "$i" + 1`
 		case $cmd in d8) args="-- $args";; esac
-		printf '%s %s %s\n' "$cmd" "$test" "$args"
-		eval "$cmd \"$test\" $args 1>\"tmp/$base.stdout\" 2>\"tmp/$base.stderr\"" || {
-			err $? "tmp/$base.stderr" "tmp/$base.stdout"
-			continue
-		}
-		cmp "tmp/$base.stdout" "fixtures/$base.$i.stdout"
+		cmd "$cmd" "$test" "$args" || continue
+		cmp "tmp/$base.stdout" "fixtures/2.$i-argv.txt"
 		cmp "tmp/$base.stderr" /dev/null
 	done
 done

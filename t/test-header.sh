@@ -3,9 +3,19 @@ export ELECTRON_ENABLE_LOGGING=true
 export NODE_OPTIONS='--experimental-modules --no-warnings'
 status=0
 
+# Execute a command and dump its output to `tmp/*.std{err,out}`
+cmd(){
+	set -- "$1" "$2" "$3" "${2##*/}"
+	set -- "$1" "$2" "$3" "tmp/${4%.*}"
+	printf '\e[38;5;8m$ %s %s %s\e[0m\n' "$1" "$2" "$3"
+	eval "$1 \"$2\" $3 1>\"$4.stdout\" 2>\"$4.stderr\"" || err $? "$4.stderr" "$4.stdout"
+}
+
 # Compare two files and complain if they're different
 cmp(){
-	set -- "`diff -U4 "$1" "$2"`" "$?" "/dev/${1##*.}"
+	[ -t 0 ] \
+	&& set -- "`diff -U4 "$1" "$2"`"    "$?" "/dev/${1##*.}" \
+	|| set -- "`cat | diff -U4 "$1" -`" "$?" "/dev/${1##*.}"
 	if [ $2 -ne 0 ]; then
 		printf '\n%4s\e[1m%s\e[0m' \  "$3"
 		printf '%s' "$1" | sed -f format-diff.sed
