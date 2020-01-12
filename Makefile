@@ -17,7 +17,7 @@ lint-tests:
 test: lint-tests
 	@ for i in t/{1..9}*.sh; do \
 		[ -x "$$i" ] || continue; \
-		echo $$i; "$$i" || exit $?; \
+		echo $$i; "$$i" || exit $$?; \
 	done
 
 .PHONY: test
