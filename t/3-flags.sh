@@ -25,10 +25,10 @@ cmp "$out" fixtures/3.3-flags-qjs.txt
 cmp "$err" /dev/null
 
 # QuickJS with extensions
-cmd qjsbn "$file"
+cmd 'qjs --bignum' "$file"
 cmp "$out" fixtures/3.4-flags-qjsbn.txt
 cmp "$err" /dev/null
-cmd 'qjsbn --std' "$file"
+cmd 'qjs --std --bignum' "$file"
 cmp "$out" fixtures/3.4-flags-qjsbn.txt
 cmp "$err" /dev/null
 
