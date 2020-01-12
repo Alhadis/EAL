@@ -7,8 +7,8 @@ temp='tmp/6-exit'
 for cmd in node 'deno -A' 'qjs --std' d8 electron; do
 	for code in '' 0 1 2 3 10 64 127 255; do
 		
-		# D8 requires `--` before script arguments
-		unset dash; case $cmd in d8) case $code in ?*) dash='-- ';; esac; esac
+		# D8 and Deno v0.29.0+ require `--` before script arguments
+		unset dash; case "${cmd%% *}" in deno|d8) case $code in ?*) dash='-- ';; esac; esac
 		
 		# Echo a command that (sort of) represents what we're doing
 		printf '\e[38;5;8m$ %s %s %s; [ $? -eq %i ]\e[0m\n' \
