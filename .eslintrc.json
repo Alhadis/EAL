@@ -6,17 +6,15 @@
 		"mocha":   false,
 		"node":    false
 	},
-	"ignorePatterns": ["test.mjs"],
+	"ignorePatterns": ["test.js", "test.mjs"],
 	"overrides": [{
-		"files": ["lib/engine.mjs"],
+		"files": ["lib/flags.mjs"],
+		"rules": {"brace-style": 0},
+		"env":   {"browser": true},
 		"globals": {
 			"process":    true,
 			"testRunner": true
 		}
-	},{
-		"files": ["lib/features.mjs"],
-		"rules": {"brace-style": 0},
-		"env":   {"browser": true}
 	},{
 		"files": ["lib/shims.mjs"],
 		"settings": {
