@@ -9,7 +9,7 @@ for cmd in node 'deno -A' 'qjs --std' d8 electron; do
 	i=0
 	for args in 'Foo Bar' 'Foo Bar Baz' '"Foo Bar" Baz'; do
 		i=`expr "$i" + 1`
-		case "${cmd%% *}" in deno|d8) args="-- $args";; esac
+		case "${cmd%% *}" in d8) args="-- $args";; esac
 		cmd "$cmd" "$test" "$args" || continue
 		cmp "tmp/$base.stdout" "fixtures/2.$i-argv.txt"
 		cmp "tmp/$base.stderr" /dev/null
