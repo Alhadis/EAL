@@ -15,7 +15,10 @@
 		"rules": {"brace-style": 0},
 		"env":   {"browser": true},
 		"globals": {
+			"Deno":       true,
+			"global":     true,
 			"process":    true,
+			"scriptArgs": true,
 			"testRunner": true
 		}
 	},{
