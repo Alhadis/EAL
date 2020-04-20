@@ -8,6 +8,9 @@
 	},
 	"ignorePatterns": ["test.js", "test.mjs"],
 	"overrides": [{
+		"files":   ["smoke-test.js"],
+		"globals": {"console": true}
+	},{
 		"files": ["lib/flags.mjs"],
 		"rules": {"brace-style": 0},
 		"env":   {"browser": true},
