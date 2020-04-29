@@ -5,6 +5,12 @@ status=0
 
 # Execute a command and dump its output to `tmp/*.std{err,out}`
 cmd(){
+	if [ -d "$COVERAGE" ]; then
+		case "${1%% *}" in
+			d8)   set -- "d8${1#d8} --lcov=$COVERAGE/d8.lcov" "$2" "$3";;
+			node) export NODE_V8_COVERAGE="$COVERAGE/node";;
+		esac
+	fi
 	set -- "$1" "$2" "$3" "${2##*/}"
 	set -- "$1" "$2" "$3" "tmp/${4%.*}"
 	printf '\e[38;5;8m$ %s %s %s\e[0m\n' "$1" "$2" "$3"

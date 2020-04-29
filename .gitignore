@@ -1,2 +1,3 @@
+/t/coverage
 /t/tmp/*
 !/t/tmp/.keep
