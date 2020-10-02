@@ -22,8 +22,8 @@ for cmd in node 'deno run -A' 'qjs --std' v8 electron; do
 		cmp "$temp.stdout" /dev/null && \
 		cmp "$temp.stderr" /dev/null || continue
 		
-		# Make test(1) happy
-		[ -z "$code" ] && code=0
+		# Unspecified exit codes default to 13 in Node 14.8+ (see: nodejs/node@e948ef3)
+		[ "$code" ] || case "$cmd${actual_code##13}" in node) code=13;; *) code=0;; esac
 		
 		# Piggy-back on our existing comparison logic for prettier-looking errors
 		[ "$actual_code" -eq "$code" ] || {

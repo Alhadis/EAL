@@ -1,6 +1,7 @@
 export ELECTRON_RUN_AS_NODE=1
 export ELECTRON_ENABLE_LOGGING=true
 export NODE_OPTIONS='--experimental-modules --no-warnings'
+export NO_COLOR=1
 status=0
 
 # Execute a command and dump its output to `tmp/*.std{err,out}`
