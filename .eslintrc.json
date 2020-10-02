@@ -22,7 +22,7 @@
 			"testRunner": true
 		}
 	},{
-		"files": ["lib/shims.mjs"],
+		"files": ["lib/{fs,shims}.mjs"],
 		"settings": {
 			"import/core-modules": ["electron", "std"]
 		},
