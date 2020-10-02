@@ -7,7 +7,7 @@ status=0
 cmd(){
 	if [ -d "$COVERAGE" ]; then
 		case "${1%% *}" in
-			d8)   set -- "d8${1#d8} --lcov=$COVERAGE/d8.lcov" "$2" "$3";;
+			v8)   set -- "v8${1#v8} --lcov=$COVERAGE/v8.lcov" "$2" "$3";;
 			node) export NODE_V8_COVERAGE="$COVERAGE/node";;
 		esac
 	fi

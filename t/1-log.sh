@@ -3,7 +3,7 @@ cd "${0%/*}"
 . ./test-header.sh
 
 for test in fixtures/1.*.mjs; do
-	for cmd in node 'deno -A' 'qjs --std' d8 electron; do
+	for cmd in node 'deno run -A' 'qjs --std' v8 electron 'xs -m'; do
 		base="${test##*/}"
 		base="${base%.mjs}"
 		cmd "$cmd" "$test" || continue

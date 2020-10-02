@@ -4,11 +4,11 @@ cd "${0%/*}"
 
 file='fixtures/6-exit.mjs'
 temp='tmp/6-exit'
-for cmd in node 'deno -A' 'qjs --std' d8 electron; do
+for cmd in node 'deno run -A' 'qjs --std' v8 electron; do
 	for code in '' 0 1 2 3 10 64 127 255; do
 		
-		# D8 requires `--` before script arguments
-		unset dash; case "${cmd%% *}" in d8) case $code in ?*) dash='-- ';; esac; esac
+		# V8 requires `--` before script arguments
+		unset dash; case "${cmd%% *}" in v8) case $code in ?*) dash='-- ';; esac; esac
 		
 		# Echo a command that (sort of) represents what we're doing
 		printf '\e[38;5;8m$ %s %s %s; [ $? -eq %i ]\e[0m\n' \

@@ -13,14 +13,14 @@ abspath="`pwd`/$file"
 
 temp='tmp/4-script-path'
 printf '%s\n' "$abspath" > "$temp.txt"
-for cmd in node 'deno -A' 'qjs --std' electron; do
+for cmd in node 'deno run -A' 'qjs --std' electron; do
 	cmd "$cmd" "$file"
 	cmp "$temp.stdout" "$temp.txt"
 	cmp "$temp.stderr" /dev/null
 done
 
 # V8: No support for $0, assert `null` value instead
-cmd d8 "$file"
+cmd v8 "$file"
 printf 'null\n' > "$temp.txt"
 cmp "$temp.stdout" "$temp.txt"
 cmp "$temp.stderr" /dev/null

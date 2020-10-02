@@ -5,7 +5,7 @@ isBrowser: false
 isDeno: false
 isElectron: false
 isNode: false
-isQuickJS: true
-isQuickJSExt: true
-isV8Shell: false
+isQuickJS: false
+isQuickJSExt: false
+isV8Shell: true
 isXS: false

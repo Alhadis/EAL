@@ -12,7 +12,7 @@ cmp "$out" fixtures/3.1-flags-node.txt
 cmp "$err" /dev/null
 
 # Deno
-cmd 'deno -A' "$file"
+cmd 'deno run -A' "$file"
 cmp "$out" fixtures/3.2-flags-deno.txt
 cmp "$err" /dev/null
 
@@ -33,13 +33,18 @@ cmp "$out" fixtures/3.4-flags-qjsbn.txt
 cmp "$err" /dev/null
 
 # V8 shell
-cmd d8 "$file"
-cmp "$out" fixtures/3.5-flags-d8.txt
+cmd v8 "$file"
+cmp "$out" fixtures/3.5-flags-v8.txt
 cmp "$err" /dev/null
 
 # Electron
 cmd electron "$file"
 cmp "$out" fixtures/3.6-flags-electron.txt
+cmp "$err" /dev/null
+
+# Moddable XS
+cmd 'xs -m' "$file"
+cmp "$out" fixtures/3.7-flags-xs.txt
 cmp "$err" /dev/null
 
 exit $status

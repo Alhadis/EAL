@@ -9,6 +9,7 @@ import {
 	isQuickJS,
 	isQuickJSExt,
 	isV8Shell,
+	isXS,
 	log,
 } from "../../index.mjs";
 
@@ -22,3 +23,4 @@ log(`isNode: ${isNode}`);
 log(`isQuickJS: ${isQuickJS}`);
 log(`isQuickJSExt: ${isQuickJSExt}`);
 log(`isV8Shell: ${isV8Shell}`);
+log(`isXS: ${isXS}`);

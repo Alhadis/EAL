@@ -14,7 +14,7 @@ which realpath 2>&1 >/dev/null || {
 
 file='fixtures/5-exec-path.mjs'
 temp='tmp/5-exec-path'
-for cmd in node 'deno -A' 'qjs --std'; do
+for cmd in node 'deno run -A' 'qjs --std'; do
 	path=`which "${cmd%% *}"`
 	path=`realpath "$path"`
 	printf '%s\n' "$path" > "$temp.txt"

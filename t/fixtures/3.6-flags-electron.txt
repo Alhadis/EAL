@@ -8,3 +8,4 @@ isNode: true
 isQuickJS: false
 isQuickJSExt: false
 isV8Shell: false
+isXS: false

@@ -1,10 +1,11 @@
 haveHighResTiming: false
 haveNativeDOM: false
-haveSourceAccess: true
+haveSourceAccess: false
 isBrowser: false
 isDeno: false
 isElectron: false
 isNode: false
 isQuickJS: false
 isQuickJSExt: false
-isV8Shell: true
+isV8Shell: false
+isXS: true
