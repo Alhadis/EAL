@@ -6,7 +6,7 @@ Currently a work-in-progress.
 ##### Supported environments:
 
 * [x] Browsers
-* [x] [Deno](https://deno.land/) >=0.42.0
+* [x] [Deno](https://deno.land/) >=1.3.0
 * [x] [Electron](https://electronjs.org/docs/api) >=8.0.0
 * [x] [GraalJS](https://github.com/graalvm/graaljs) >=20.0.0 [*](#1)
 * [x] [Moddable XS](https://www.moddable.com/) >=10.1.0 [*](#1)
