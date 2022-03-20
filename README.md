@@ -10,7 +10,7 @@ Currently a work-in-progress.
 * [x] [Electron](https://electronjs.org/docs/api) >=8.0.0
 * [x] [GraalJS](https://github.com/graalvm/graaljs) >=20.0.0 [*](#1)
 * [x] [Moddable XS](https://www.moddable.com/) >=10.1.0 [*](#1)
-* [x] [Node.js](https://nodejs.org/) >=13.2.0
+* [x] [Node.js](https://nodejs.org/) >=12.17.0 <13 || >=13.2.0
 * [x] [QuickJS](https://bellard.org/quickjs/) >=2020-04-12
 * [x] [V8 debugging shell](https://v8.dev/docs/d8) >=7.9.317.31
 
