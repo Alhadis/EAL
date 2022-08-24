@@ -1,6 +1,6 @@
 {
-	"extends": "@alhadis",
-	"parser": "babel-eslint",
+	"extends": "@alhadis/eslint-config/babel",
+	"parser": "@babel/eslint-parser",
 	"env": {
 		"browser": false,
 		"mocha":   false,
