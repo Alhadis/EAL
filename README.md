@@ -8,6 +8,7 @@ Currently a work-in-progress.
 * [x] Browsers
 * [x] [Deno](https://doc.deno.land/deno/stable) >=1.3.0
 * [x] [Electron](https://electronjs.org/docs/latest) >=8.0.0
+* [x] [GNOME `gjs`](https://gitlab.gnome.org/GNOME/gjs) >=1.67.2 [*](#1)
 * [x] [GraalJS](https://github.com/oracle/graaljs) >=20.0.0 [*](#1)
 * [x] [Moddable XS](https://www.moddable.com/) >=10.1.0 [*](#1)
 * [x] [Node.js](https://nodejs.org/) >=12.17.0 <13 || >=13.2.0
@@ -19,7 +20,6 @@ Currently a work-in-progress.
 * [ ] [Adobe ExtendScript](https://web.archive.org/web/20210506202111/https://www.adobe.com/devnet/illustrator/scripting.html)
 * [ ] [Chakra shell](https://github.com/chakra-core/ChakraCore)
 * [ ] [Duktape](https://wiki.duktape.org/postes5features)
-* [ ] [GNOME `gjs`](https://gitlab.gnome.org/GNOME/gjs) (see [#328](https://gitlab.gnome.org/GNOME/gjs/-/issues/328))
 * [ ] [JerryScript](https://jerryscript.net/)
 * [ ] [JXA](https://github.com/JXA-Cookbook/JXA-Cookbook/wiki/ES6-Features-in-JXA "JavaScript Automation for macOS")
 * [ ] [MuJS](https://mujs.com/)
