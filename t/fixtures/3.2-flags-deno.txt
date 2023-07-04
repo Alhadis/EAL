@@ -1,4 +1,4 @@
-haveHighResTiming: false
+haveHighResTiming: true
 haveNativeDOM: false
 haveSourceAccess: true
 isBrowser: false
